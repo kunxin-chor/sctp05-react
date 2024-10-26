@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+// useState is a react HOOK. A hook is a way to
+// add new functionalty to a React componnet
 
 const App = () => {
 
@@ -29,7 +31,7 @@ const App = () => {
   const handleClick = () => {
     if (textColor === "red") {
       // color = "blue" ==> WON'T WORK!
-      setTextColor("blue");
+      setTextColor("blue"); // setTextColor is second index of the array returned by useSatte
     } else {
       setTextColor("red");
     }
