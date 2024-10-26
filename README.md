@@ -16,3 +16,13 @@ npm create vite@latest
 ## How to remove the existing css
 1. Delete the content in `src/index.css`
 2. Delete the content in `src/App.css`
+3. Delete the content in `src/App.jsx` and replace with:
+```
+import React from 'react'
+
+export default function App() {
+  return (<>
+    <h1>Hello World</h1>
+  </>)
+};
+```
