@@ -183,21 +183,25 @@ export default function App() {
         <label>Hobbies (choose more than one)</label>
         <input type="checkbox" name="hobbies" value="netflix"
           onChange={updateHobbies}
+          checked={hobbies.includes("netflix")}
         />
         <label>Netflix and Chill</label>
 
         <input type="checkbox" name="hobbies" value="sleeping"
           onChange={updateHobbies}
+          checked={hobbies.includes("sleeping")}
         />
         <label>Sleeping</label>
 
         <input type="checkbox" name="hobbies" value="cycling"
           onChange={updateHobbies}
+          checked={hobbies.includes("cycling")}
         />
         <label>Cycling</label>
 
         <input type="checkbox" name="hobbies" value="others"
           onChange={updateHobbies}
+          checked={hobbies.includes("others")}
         />
         <label>Others</label>
 
