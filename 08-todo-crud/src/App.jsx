@@ -94,6 +94,17 @@ export default function App() {
 
   }
 
+  const deleteTask = (idToDelete) => {
+    // const indexToDelete = taskList.findIndex(t => t.id === idToDelete);
+    // const lhs = taskList.slice(0, indexToDelete);
+    // const rhs = taskList.slice(indexToDelete + 1)
+    // const cloned = [...lhs, ...rhs];
+    // setTaskList(cloned);
+
+    const cloned = taskList.filter( task => task.id !== idToDelete);
+    setTaskList(cloned);
+  }
+
   return (
     <>
       <h1>Todo List</h1>
@@ -119,7 +130,11 @@ export default function App() {
 
         {taskList.map(task => (
           <li key={task.id}>
-            {task.title} (Urgency: {task.urgency}) <input type="checkbox" checked={task.done} />
+            {task.title} (Urgency: {task.urgency}) <input type="checkbox" checked={task.done} /> 
+            <button onClick={()=>{
+              // only when the delete button is clicked, then execute the deleteTask function
+              deleteTask(task.id);
+            }}>Delete</button>
           </li>
         ))}
       </ul>
